@@ -2,3 +2,9 @@ node_modules
 .DS_Store
 .prettierrc
 Dockerfile
+
+#Changes below are mine
+#This is ignoring any .idea folder in the project
+.idea
+#This is ignoring any package-lock.json file in the project
+package-lock.json
