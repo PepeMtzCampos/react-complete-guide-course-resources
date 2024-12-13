@@ -1,2 +1,9 @@
 react.dev <=  official site
 https://github.com/PepeMtzCampos/react-complete-guide-course-resources //this git repo is the source of the course
+
+Set remote
+git remote add origin https://PepeMtzCampos@github.com/PepeMtzCampos/react-complete-guide-course-resources.git
+
+Set access token
+https://github.com/settings/tokens
+git remote set-url origin https://PepeMtzCampos:<YourPAT>@github.com/PepeMtzCampos/react-complete-guide-course-resources.git
