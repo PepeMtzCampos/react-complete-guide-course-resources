@@ -1,0 +1,2 @@
+react.dev <=  official site
+https://github.com/PepeMtzCampos/react-complete-guide-course-resources //this git repo is the source of the course
