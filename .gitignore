@@ -4,7 +4,9 @@ node_modules
 Dockerfile
 
 #Changes below are mine
-#This is ignoring any .idea folder in the project
+#This is ignoring any .idea, .cache, dist folder in the project
 .idea
+.cache
+dist
 #This is ignoring any package-lock.json file in the project
 package-lock.json
