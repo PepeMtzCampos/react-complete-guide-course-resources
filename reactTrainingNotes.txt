@@ -7,3 +7,9 @@ git remote add origin https://PepeMtzCampos@github.com/PepeMtzCampos/react-compl
 Set access token
 https://github.com/settings/tokens
 git remote set-url origin https://PepeMtzCampos:<YourPAT>@github.com/PepeMtzCampos/react-complete-guide-course-resources.git
+
+Set global email
+git config --global user.email "pepe.mtzcampos@gmail.com"  
+
+Set global user name
+git config --global user.name "PepeMtzCampos"
