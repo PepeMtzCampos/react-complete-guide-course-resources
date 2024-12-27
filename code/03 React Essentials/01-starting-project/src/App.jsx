@@ -1,10 +1,28 @@
+import reactImg from './assets/react-core-concepts.png';
+import { CORE_CONCEPTS } from './data.js';
+
+const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
+
+function CoreConcept(props) {
+  return (
+    <li>
+      <img src={props.image} alt={props.title} />
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+    </li>
+  );
+}
+
 function Header() {
+  
+  const description = reactDescriptions[Math.floor(Math.random() * reactDescriptions.length)];
+
   return (
     <header>
-      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+      <img src={reactImg} alt="Stylized atom" />
       <h1>React Essentials</h1>
       <p>
-        Fundamental React concepts you will need for almost any app you are
+        {description} React concepts you will need for almost any app you are
         going to build!
       </p>
     </header>
@@ -16,7 +34,30 @@ function App() {
     <div>
       <Header />
       <main>
-        <h2>Time to get started!</h2>
+        <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+          {/* Assigning individual props */}
+          <CoreConcept 
+            title={CORE_CONCEPTS[0].title}
+            description={CORE_CONCEPTS[0].description}
+            image={CORE_CONCEPTS[0].image}
+          />
+          {/* Using spread (properties names should match) */}
+          <CoreConcept {...CORE_CONCEPTS[1]} />
+          <CoreConcept {...CORE_CONCEPTS[2]} />
+          <CoreConcept {...CORE_CONCEPTS[3]} />
+          </ul>
+
+          <h2>Core Concepts with .map</h2>
+          <ul>
+            {/* Using map and spread (properties names should match) */}
+            {CORE_CONCEPTS.map(
+              (concept, index) => ( <CoreConcept key={index} {...concept} /> )
+            )}
+          </ul>
+
+        </section>
       </main>
     </div>
   );
