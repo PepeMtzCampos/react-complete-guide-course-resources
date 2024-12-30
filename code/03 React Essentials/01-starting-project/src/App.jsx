@@ -44,10 +44,30 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onClick={() => handleTabClick('components')}>Components</TabButton>
-            <TabButton onClick={() => handleTabClick('jsx')}>JSX</TabButton>
-            <TabButton onClick={() => handleTabClick('props')}>Props</TabButton>
-            <TabButton onClick={() => handleTabClick('state')}>State</TabButton>
+            <TabButton
+              isSelected={selectedTopic === 'components'} 
+              onClick={() => handleTabClick('components')}
+            >
+              Components
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === 'jsx'} 
+              onClick={() => handleTabClick('jsx')}
+            >
+              JSX
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === 'props'} 
+              onClick={() => handleTabClick('props')}
+            >
+              Props
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === 'state'} 
+              onClick={() => handleTabClick('state')}
+            >
+              State
+            </TabButton>
           </menu>
           
           {!selectedTopic ? 
