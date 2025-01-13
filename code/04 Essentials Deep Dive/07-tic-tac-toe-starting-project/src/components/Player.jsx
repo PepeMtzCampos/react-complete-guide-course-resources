@@ -10,7 +10,7 @@ export default function Player({initialName, symbol}) {
     }
 
     function handleInputChange(e){
-        setPlayerName(e.target.value);
+        setPlayerName(e.target.value); //Double way binding
     }
 
     return(
