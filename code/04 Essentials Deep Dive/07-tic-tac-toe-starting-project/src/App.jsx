@@ -21,7 +21,7 @@ function App() {
       if (prevGameTurns.length > 0 && prevGameTurns[0].player === 'X') {
         currentPlayer = 'O';
       }
-      
+
       const updatedTurns = [
         { square: { row: rowIndex, col: colIndex }, player: currentPlayer },
         ...prevGameTurns
@@ -41,7 +41,7 @@ function App() {
         <GameBoard 
           onSelectSquare={handleSelectSquare} 
           turns={gameTurns} />
-        <Log />
+        <Log turns={gameTurns}/>
       </div>
     </main>
   )
